@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Button Redirects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212; /* Black background */
+            color: #e0e0e0; /* Light gray text color */
+            text-align: center;
+        }
+        #password-container {
+            width: 100%;
+            max-width: 400px; /* Set a maximum width for the password container */
+            padding: 20px;
+            background-color: #1e1e1e; /* Darker gray background for the container */
+            border: 1px solid #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        #password-input {
+            padding: 10px;
+            width: 100%; /* Set to 100% for full width */
+            background-color: #333; /* Dark input background */
+            color: #e0e0e0; /* Light gray text in input */
+            border: 1px solid #555;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            text-align: center; /* Center placeholder text */
+            box-sizing: border-box; /* Ensures padding is included in width */
+        }
+        #submit-password {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3a4a66; /* Navy blue submit button */
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%; /* Make the button full width */
+        }
+        #submit-password:hover {
+            background-color: #2e3d57; /* Darker navy on hover */
+        }
+        #button-container {
+            display: none; /* Hidden by default */
+            margin-top: 20px;
+        }
+        .button {
+            display: block;
+            padding: 10px 20px;
+            margin: 10px auto; /* Center buttons */
+            border: none;
+            background-color: #3a4a66; /* Navy blue button color */
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%; /* Make the button full width */
+        }
+        .button:hover {
+            background-color: #2e3d57; /* Darker navy on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div id="password-container">
+    <h2>Enter Password</h2>
+    <input type="password" id="password-input" placeholder="Enter your password..." />
+    <button id="submit-password">Submit</button>
+    <div id="button-container">
+        <button class="button" onclick="window.location.href='https://website1.com'">Website 1</button>
+        <button class="button" onclick="window.location.href='https://website2.com'">Website 2</button>
+        <button class="button" onclick="window.location.href='https://website3.com'">Website 3</button>
+    </div>
+</div>
+
+<script>
+    const correctPassword = "LOLNOTTHEPASSWORD"; // Replace with your desired password
+    const passwordInput = document.getElementById('password-input');
+    const submitPasswordButton = document.getElementById('submit-password');
+    const buttonContainer = document.getElementById('button-container');
+    
+    submitPasswordButton.addEventListener('click', () => {
+        if (passwordInput.value === correctPassword) {
+            // Hide the password input and show buttons
+            passwordInput.value = ''; // Clear the password input
+            buttonContainer.style.display = 'block';
+        } else {
+            alert("Incorrect password. Please try again.");
+        }
+    });
+</script>
+
+</body>
+</html>
