@@ -91,7 +91,7 @@
         if (passwordInput.value === correctPassword) {
             // Hide the password input and show buttons
             passwordInput.value = ''; // Clear the password input
-            passwordInput.parentElement.style.display = 'none'; // Hide the password container
+            document.getElementById('password-container').style.display = 'none'; // Hide the password container
             buttonContainer.style.display = 'block'; // Show button container
         } else {
             alert("Incorrect password. Please try again.");
