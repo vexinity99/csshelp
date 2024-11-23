@@ -39,14 +39,14 @@
         #submit-password {
             padding: 10px 20px;
             border: none;
-            background-color: #f28dcf;
+            background-color: #3a4a66;
             color: white;
             cursor: pointer;
             border-radius: 4px;
             width: 100%;
         }
         #submit-password:hover {
-            background-color: #f03eb2;
+            background-color: #2e3d57;
         }
         #button-container {
             display: none;
@@ -57,21 +57,21 @@
             padding: 10px 20px;
             margin: 10px auto;
             border: none;
-            background-color: #f28dcf;
+            background-color: #3a4a66;
             color: white;
             cursor: pointer;
             border-radius: 4px;
             width: 100%;
         }
         .button:hover {
-            background-color: #f03eb2;
+            background-color: #2e3d57;
         }
     </style>
 </head>
 <body>
 
 <div id="password-container">
-    <h2>idk what to put here anymore</h2>
+    <h2 id="title">Loading...</h2>
     <input type="password" id="password-input" placeholder="Enter your password..." />
     <button id="submit-password">Submit</button>
     <div id="button-container">
@@ -105,7 +105,20 @@
 </div>
 
 <script>
-    const correctPassword = "fanum99";
+    const correctPassword = "";
+
+fetch('https://raw.githubusercontent.com/vexinity99/csshelpassets/refs/heads/main/password.txt')
+        .then(response => response.text())
+        .then(text => {
+            correctPassword = text.trim();
+        });
+
+    fetch('https://raw.githubusercontent.com/vexinity99/csshelpassets/refs/heads/main/title.txt')
+        .then(response => response.text())
+        .then(titleText => {
+            document.getElementById('title').innerText = titleText.trim();
+        });
+    
     const passwordInput = document.getElementById('password-input');
     const submitPasswordButton = document.getElementById('submit-password');
     const buttonContainer = document.getElementById('button-container');
