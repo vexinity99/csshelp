@@ -66,6 +66,14 @@
         .button:hover {
             background-color: #2e3d57;
         }
+        #section-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .section {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -75,29 +83,40 @@
     <input type="password" id="password-input" placeholder="Enter your password..." />
     <button id="submit-password">Submit</button>
     <div id="button-container">
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document/'">ai chat</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document3/'">ai humanizer</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document27/'">minecraft (NEW VERSION ADDED!!!) (actually fun)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document4/'">subway surfers (actually fun)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document5/'">slope</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document6/'">geometry dash</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document7/'">project laser</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document8/'">run 3</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document9/'">vex 5 (actually fun)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document11/'">super mario 64</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document12/'">flappy bird</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document13/'">tiny fishing (actually fun)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document14/'">slow roads</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document15/'">paper.io (actually fun)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document16/'">doge miner (actually fun)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document19/'">bitlife (kinda fun...)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document20/'">age of conflict (kinda boring...)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document21/'">google feud (pretty fun!)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document22/'">sand physics (kinda fun...)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document23/'">stickman hook (actually fun)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document24/'">tomb of the mask (kinda fun...)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document25/'">five nights at freddys 4 (kinda fun...)</button>
-        <button class="button" onclick="window.location.href='https://vexinity99.github.io/document26/'">save the doge (actually kind of addicting!)</button>
+        <div id="section-container">
+            <div class="section" id="games-section">
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document27/'">minecraft (NEW VERSION ADDED!!!) (actually fun)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document4/'">subway surfers (actually fun)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document5/'">slope</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document6/'">geometry dash</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document7/'">project laser</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document8/'">run 3</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document9/'">vex 5 (actually fun)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document11/'">super mario 64</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document12/'">flappy bird</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document13/'">tiny fishing (actually fun)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document14/'">slow roads</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document15/'">paper.io (actually fun)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document16/'">doge miner (actually fun)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document19/'">bitlife (kinda fun...)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document20/'">age of conflict (kinda boring...)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document21/'">google feud (pretty fun!)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document22/'">sand physics (kinda fun...)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document23/'">stickman hook (actually fun)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document24/'">tomb of the mask (kinda fun...)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document25/'">five nights at freddys 4 (kinda fun...)</button>
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document26/'">save the doge (actually kind of addicting!)</button>
+            </div>
+            <div class="section" id="tools-section">
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document28/'">VexAI (W.I.P)</button>
+            </div>
+            <div class="section" id="hacks-section">
+                <button class="button" onclick="window.location.href='https://vexinity99.github.io/document29/'">Blooket Hacks</button>
+            </div>
+        </div>
+        <button class="button" onclick="showSection('games')">Games</button>
+        <button class="button" onclick="showSection('tools')">Tools</button>
+        <button class="button" onclick="showSection('hacks')">Hacks</button>
     </div>
 </div>
 
@@ -128,6 +147,12 @@ fetch('https://raw.githubusercontent.com/vexinity99/csshelpassets/refs/heads/mai
             alert("Sirron Leahcim: oh my god bro, if ur from GLMS get off my site bruh, this took me forever. not giving free games!!!");
         }
     });
+
+    function showSection(section) {
+        document.getElementById('games-section').style.display = section === 'games' ? 'block' : 'none';
+        document.getElementById('tools-section').style.display = section === 'tools' ? 'block' : 'none';
+        document.getElementById('hacks-section').style.display = section === 'hacks' ? 'block' : 'none';
+    }
 </script>
 
 </body>
